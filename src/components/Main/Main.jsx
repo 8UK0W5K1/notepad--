@@ -26,6 +26,7 @@ function Main({ activeNote, onUpdateNote }) {
         />
         <textarea
           id="body"
+          value={activeNote?.body}
           onChange={(e) => onEditField("body", e.target.value)}
           placeholder="your notes here !"
         ></textarea>

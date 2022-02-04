@@ -10,8 +10,8 @@ function Sidebar({
   return (
     <div className="app-sidebar">
       <div className="app-sidebar-header">
-        <h1>Jerem's Notes</h1>
-        <button onClick={onAddNote}>Ajouter une note</button>
+        <h1>Your Notes</h1>
+        <button onClick={onAddNote}>Add a note</button>
       </div>
       <div className="app-sidebar-notes">
         {sortedNotes.map(
@@ -28,7 +28,7 @@ function Sidebar({
               {/* // revoir ceci */}
               <div className="sidebar-note-title">
                 <strong>{note.title}</strong>
-                <button onClick={() => onDeleteNote(note.id)}>Supprimer</button>
+                <button onClick={() => onDeleteNote(note.id)}>Delete</button>
               </div>
               <p>{note.body && note.body.substr(0, 25) + "..."}</p>
               {/* si note.body true,
